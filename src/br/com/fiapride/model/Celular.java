@@ -17,5 +17,17 @@ public class Celular {
 			bateria = bateria - 10; 
 		}
 	}
+	
+	public void aumentarArmazenamento(int quantidade) {
+	    if (quantidade > 0) {
+	        armazenamento = armazenamento + quantidade;
+	    }
+	}
+	
+	public void diminuirArmazenamento(int quantidade) {
+	    if (quantidade > 0 && armazenamento >= quantidade) {
+	        armazenamento = armazenamento - quantidade;
+	    }
+	}
 
 }

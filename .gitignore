@@ -1,0 +1,7 @@
+*.class
+bin/
+.vscode/
+.idea/
+*.iml
+.metadata/
+target/
