@@ -1,12 +1,18 @@
 package br.com.fiapride.main;
 
 import br.com.fiapride.model.Celular;
+import br.com.fiapride.model.Dono;
 
 public class SistemaPrincipal {
 
     public static void main(String[] args) {
 
-        Celular celular = new Celular();
+        Dono dono = new Dono("Luis", 20);
+
+        Celular celular = new Celular(dono);
+
+        System.out.println("Dono: " + celular.getProprietario().getNome());
+        System.out.println("Idade: " + celular.getProprietario().getIdade());
 
         celular.bateria = 50;
 
