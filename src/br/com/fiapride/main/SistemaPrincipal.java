@@ -91,7 +91,7 @@ public class SistemaPrincipal {
 
         // TESTE 1: Classe abstrata não pode ser instanciada.
         // Retire o // da linha abaixo para observar o erro.
-        Celular teste = new Celular(dono);
+        // Celular teste = new Celular(dono);
 
         // TESTE 2: Classes filhas podem ser instanciadas.
         Celular androidTeste = new Android(dono, true);
