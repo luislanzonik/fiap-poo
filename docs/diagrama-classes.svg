@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="760" viewBox="0 0 1200 760" role="img" aria-label="Diagrama UML do sistema de celulares">
+<defs><style>text{font-family:Arial,sans-serif;fill:#17243b}.head{font-weight:700;font-size:20px}.sub{font-size:13px;fill:#52617b}.line{font-size:15px}.small{font-size:14px}.box{fill:#fff;stroke:#566783;stroke-width:2}.header{fill:#e9eefb}.abs{fill:#dbe9ff}.int{fill:#e4f5ea}.arr{fill:none;stroke:#566783;stroke-width:2.4;stroke-linejoin:round}.real{fill:none;stroke:#687b91;stroke-width:2;stroke-dasharray:9 6}.hr{stroke:#c8d1df;stroke-width:1.3}</style>
+<marker id="assoc" markerWidth="9" markerHeight="9" refX="8" refY="4.5" orient="auto"><path d="M0 1 L8 4.5 L0 8" fill="none" stroke="#566783" stroke-width="1.3"/></marker>
+</defs>
+<rect width="1200" height="760" fill="#f7f9fd"/>
+<text x="52" y="42" font-size="28" font-weight="700">Sistema de Celulares — Diagrama de Classes</text>
+<text x="52" y="67" class="sub">Checkpoint 3 • Programação Orientada a Objetos • Aulas 1–9</text>
+<!-- Dono -->
+<rect x="42" y="133" rx="14" ry="14" width="270" height="216" class="box"/>
+<rect x="43" y="134" rx="13" ry="13" width="268" height="51" class="header"/>
+<text x="177" y="165" text-anchor="middle" class="head">Dono</text><path d="M43 185H311M43 255H311" class="hr"/>
+<text x="58" y="211" class="line">- nome: String</text><text x="58" y="237" class="line">- idade: int</text>
+<text x="58" y="282" class="small">+ getNome(): String</text><text x="58" y="306" class="small">+ getIdade(): int</text>
+<!-- Celular -->
+<rect x="391" y="108" rx="14" ry="14" width="383" height="304" class="box"/>
+<rect x="392" y="109" rx="13" ry="13" width="381" height="68" class="abs"/>
+<text x="582" y="137" text-anchor="middle" class="sub">&lt;&lt;abstract&gt;&gt;</text>
+<text x="582" y="163" text-anchor="middle" class="head" font-style="italic">Celular</text><path d="M392 177H773M392 263H773" class="hr"/>
+<text x="410" y="202" class="line">- marca: String</text><text x="410" y="226" class="line">- bateria: int</text><text x="410" y="250" class="line">- armazenamento: int</text>
+<text x="410" y="289" class="small">+ getBateria(): int</text><text x="410" y="314" class="small">+ setBateria(int): void</text>
+<text x="410" y="339" class="small">+ calcularAutonomia(): String</text>
+<text x="410" y="363" class="small" font-style="italic">+ exibirSistemaOperacional(): String</text>
+<text x="410" y="388" class="small">+ carregarBateria(): void</text>
+<!-- Conectavel -->
+<rect x="837" y="129" rx="14" ry="14" width="319" height="194" class="box"/>
+<rect x="838" y="130" rx="13" ry="13" width="317" height="75" class="int"/>
+<text x="997" y="158" text-anchor="middle" class="sub">&lt;&lt;interface&gt;&gt;</text>
+<text x="997" y="187" text-anchor="middle" class="head">Conectavel</text><path d="M838 205H1155M838 260H1155" class="hr"/>
+<text x="852" y="232" class="small">+ REDE_PADRAO: String</text>
+<text x="852" y="288" class="small">+ conectar(): String</text>
+<!-- association -->
+<path d="M312 238H391" class="arr"/><text x="350" y="225" text-anchor="middle" class="sub">1</text><text x="354" y="259" class="sub" text-anchor="middle">tem-um</text>
+<!-- Children -->
+<rect x="280" y="520" rx="14" ry="14" width="303" height="178" class="box"/>
+<rect x="281" y="521" rx="13" ry="13" width="301" height="48" class="header"/>
+<text x="432" y="552" text-anchor="middle" class="head">Android</text><path d="M281 569H582M281 618H582" class="hr"/>
+<text x="299" y="597" class="line">- temDigital: boolean</text>
+<text x="299" y="646" class="small">+ calcularAutonomia()</text><text x="299" y="673" class="small">+ conectar()</text>
+<rect x="626" y="520" rx="14" ry="14" width="303" height="178" class="box"/>
+<rect x="627" y="521" rx="13" ry="13" width="301" height="48" class="header"/>
+<text x="777" y="552" text-anchor="middle" class="head">Iphone</text><path d="M627 569H928M627 618H928" class="hr"/>
+<text x="645" y="597" class="line">- temFaceID: boolean</text>
+<text x="645" y="646" class="small">+ calcularAutonomia()</text><text x="645" y="673" class="small">+ conectar()</text>
+<!-- inheritance arrows -->
+<path d="M432 519V479H550V432" class="arr"/><path d="M539 432L550 413L561 432Z" fill="#fff" stroke="#566783" stroke-width="2"/>
+<path d="M777 519V479H614V432" class="arr"/><path d="M603 432L614 413L625 432Z" fill="#fff" stroke="#566783" stroke-width="2"/>
+<!-- interface implementation arrows -->
+<path d="M929 616H1044V343" class="real"/><path d="M1033 343L1044 324L1055 343Z" fill="#fff" stroke="#687b91" stroke-width="2"/>
+<path d="M583 654H1030V634H1044V616" class="real"/>
+<text x="54" y="737" class="sub">Triângulo vazio: herança • Linha tracejada: implementação de interface • Linha contínua: associação</text>
+</svg>
