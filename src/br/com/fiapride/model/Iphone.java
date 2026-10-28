@@ -1,3 +1,4 @@
+
 package br.com.fiapride.model;
 
 public class Iphone extends Celular {
@@ -12,4 +13,12 @@ public class Iphone extends Celular {
     public boolean isTemFaceID() {
         return temFaceID;
     }
+
+    // Aula 7 - Polimorfismo de Sobrescrita
+    @Override
+    public String calcularAutonomia() {
+        double autonomia = this.bateria / 8.0;
+        return "Autonomia do iPhone: " + autonomia + " horas.";
+    }
+
 }

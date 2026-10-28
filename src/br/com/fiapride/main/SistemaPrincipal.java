@@ -5,6 +5,8 @@ import br.com.fiapride.model.Celular;
 import br.com.fiapride.model.Dono;
 import br.com.fiapride.model.Android;
 import br.com.fiapride.model.Iphone;
+import java.util.ArrayList;
+import java.util.List;
 
 public class SistemaPrincipal {
 
@@ -68,5 +70,20 @@ public class SistemaPrincipal {
         System.out.println("\n--- Iphone ---");
         System.out.println("Dono: " + iphone.getProprietario().getNome());
         System.out.println("Possui Face ID: " + iphone.isTemFaceID());
+
+        // 12. Aula 7 - Testando o polimorfismo de sobrescrita
+        System.out.println("\n--- POLIMORFISMO ---");
+
+        samsung.bateria = 100;
+        iphone.bateria = 100;
+
+        List<Celular> celulares = new ArrayList<>();
+
+        celulares.add(samsung);
+        celulares.add(iphone);
+
+        for (Celular aparelho : celulares) {
+            System.out.println(aparelho.calcularAutonomia());
+        }
     }
 }

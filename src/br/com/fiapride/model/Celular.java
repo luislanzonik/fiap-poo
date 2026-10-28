@@ -1,42 +1,51 @@
+
 package br.com.fiapride.model;
 
 public class Celular {
 
-	public String marca;
-	public int armazenamento;
-	public int bateria;
+    public String marca;
 
-	private Dono proprietario;
+    public int armazenamento;
 
-	public Celular(Dono proprietario) {
-	    this.proprietario = proprietario;
-	}
+    public int bateria;
 
-	public Dono getProprietario() {
-	    return proprietario;
-	}
+    private Dono proprietario;
 
-	public void carregarBateria() {
-		if (bateria < 100) {
-			bateria = 100;
-		}
-	}
+    public Celular(Dono proprietario) {
+        this.proprietario = proprietario;
+    }
 
-	public void reduzirBateria() {
-		if (bateria > 0) {
-			bateria = bateria - 10;
-		}
-	}
+    public Dono getProprietario() {
+        return proprietario;
+    }
 
-	public void aumentarArmazenamento(int quantidade) {
-	    if (quantidade > 0) {
-	        armazenamento = armazenamento + quantidade;
-	    }
-	}
+    public void carregarBateria() {
+        if (bateria < 100) {
+            bateria = 100;
+        }
+    }
 
-	public void diminuirArmazenamento(int quantidade) {
-	    if (quantidade > 0 && armazenamento >= quantidade) {
-	        armazenamento = armazenamento - quantidade;
-	    }
-	}
+    public void reduzirBateria() {
+        if (bateria > 0) {
+            bateria = bateria - 10;
+        }
+    }
+
+    public void aumentarArmazenamento(int quantidade) {
+        if (quantidade > 0) {
+            armazenamento = armazenamento + quantidade;
+        }
+    }
+
+    public void diminuirArmazenamento(int quantidade) {
+        if (quantidade > 0 && armazenamento >= quantidade) {
+            armazenamento = armazenamento - quantidade;
+        }
+    }
+
+    // Aula 7 - Polimorfismo de Sobrescrita
+    public String calcularAutonomia() {
+        return "Autonomia não definida para este celular.";
+    }
+
 }

@@ -13,4 +13,12 @@ public class Android extends Celular {
     public boolean isTemDigital() {
         return temDigital;
     }
+
+    // Aula 7 - Polimorfismo de Sobrescrita
+    @Override
+    public String calcularAutonomia() {
+        double autonomia = this.bateria / 10.0;
+        return "Autonomia do Android: " + autonomia + " horas.";
+    }
+
 }
