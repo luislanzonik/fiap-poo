@@ -4,7 +4,7 @@
 
 - **Nome:** Luís Roberto Lanzoni Kihara Júnior
 - **RM:** 567406
-- **Turma:** a confirmar na identificação acadêmica (não informada nesta documentação)
+- **Turma:** CCPR
 - **Curso:** Ciência da Computação — FIAP
 - **GitHub:** [@luislanzonik](https://github.com/luislanzonik)
 
@@ -161,7 +161,7 @@ O projeto demonstrou como representar entidades com classes e objetos, organizar
 
 Poderia separar os testes em classes específicas, adicionar testes automatizados e refinar a validação de dados. Também seria interessante representar melhor a capacidade total do armazenamento e calcular a autonomia a partir de características reais dos aparelhos, em vez de valores fictícios. Outra melhoria seria padronizar nomes e comentários do código, além de tratar explicitamente entradas inválidas com mensagens ao usuário.
 
-## Como executar
+## Verificação automática da compilação\n\nO workflow [Verificar compilacao Java](.github/workflows/verificar-java.yml) compila todos os arquivos com Java 21 e executa as duas classes principais a cada push. Consulte a [aba Actions](https://github.com/luislanzonik/fiap-poo/actions) para saber se a execução ficou verde. Os diagramas em SVG são arquivos de imagem; não são capturas do Astah.\n\n## Como executar
 
 1. Abra o projeto Java no Eclipse.
 2. Localize `src/br/com/fiapride/main/SistemaPrincipal.java`.
@@ -170,8 +170,8 @@ Poderia separar os testes em classes específicas, adicionar testes automatizado
 
 ## Revisão antes da entrega
 
-- [ ] Informar a turma oficial e revisar as reflexões em primeira pessoa.
+- [x] Informar turma acadêmica (CCPR).\n- [ ] Revisar as reflexões pessoais em primeira pessoa.
 - [x] Incluir demonstração FiapRide complementar ao projeto pessoal.
-- [ ] Confirmar o padrão de nome do repositório: o PDF apresenta dois exemplos diferentes.
-- [ ] Se necessário, anexar prints do Astah.
+- [ ] Nome: o PDF menciona `poo-[seu-nome]` na abertura e `poo-fiapride-[seu-nome]` na entrega. Preferir o padrão específico da entrega, após confirmação do professor.
+- [x] Diagramas de classes e interfaces incluídos como SVG no diretório `docs/` (o enunciado exige imagens, mas não especifica Astah).
 - [x] Manter o histórico de commits e o repositório público.
