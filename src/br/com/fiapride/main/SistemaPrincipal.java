@@ -5,6 +5,7 @@ import br.com.fiapride.model.Celular;
 import br.com.fiapride.model.Dono;
 import br.com.fiapride.model.Android;
 import br.com.fiapride.model.Iphone;
+import br.com.fiapride.model.Conectavel;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -136,6 +137,22 @@ public class SistemaPrincipal {
         System.out.println("iPhone personalizado:");
         System.out.println("Dono: " + iphonePersonalizado.getProprietario().getNome());
         System.out.println("Possui Face ID: " + iphonePersonalizado.isTemFaceID());
+
+        // 16. Aula 9 - Interfaces
+        System.out.println("\n--- INTERFACES ---");
+
+        System.out.println("Rede padrão: " + Conectavel.REDE_PADRAO);
+
+        // Lista de objetos que implementam a interface
+        List<Conectavel> dispositivos = new ArrayList<>();
+
+        dispositivos.add(samsung);
+        dispositivos.add(iphone);
+
+        // Testando o método da interface
+        for (Conectavel dispositivo : dispositivos) {
+            System.out.println(dispositivo.conectar());
+        }
 
     }
 }

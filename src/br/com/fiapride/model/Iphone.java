@@ -1,7 +1,7 @@
 
 package br.com.fiapride.model;
 
-public class Iphone extends Celular {
+public class Iphone extends Celular implements Conectavel {
 
     private boolean temFaceID;
 
@@ -31,6 +31,12 @@ public class Iphone extends Celular {
     @Override
     public String exibirSistemaOperacional() {
         return "Sistema operacional: iOS";
+    }
+
+    // Aula 9 - Implementação da interface Conectavel
+    @Override
+    public String conectar() {
+        return "iPhone conectado à rede " + Conectavel.REDE_PADRAO;
     }
 
 }

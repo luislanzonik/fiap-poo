@@ -1,7 +1,7 @@
 
 package br.com.fiapride.model;
 
-public class Android extends Celular {
+public class Android extends Celular implements Conectavel {
 
     private boolean temDigital;
 
@@ -31,6 +31,12 @@ public class Android extends Celular {
     @Override
     public String exibirSistemaOperacional() {
         return "Sistema operacional: Android";
+    }
+
+    // Aula 9 - Implementação da interface Conectavel
+    @Override
+    public String conectar() {
+        return "Android conectado à rede " + Conectavel.REDE_PADRAO;
     }
 
 }
