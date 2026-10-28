@@ -4,15 +4,15 @@
 
 - **Nome:** Luís Roberto Lanzoni Kihara Júnior
 - **RM:** 567406
-- **Turma:** [PREENCHER]
+- **Turma:** a confirmar na identificação acadêmica (não informada nesta documentação)
 - **Curso:** Ciência da Computação — FIAP
 - **GitHub:** [@luislanzonik](https://github.com/luislanzonik)
 
 ## Descrição do projeto
 
-Este repositório apresenta meu **projeto pessoal de celulares**, desenvolvido em Java para aplicar os conteúdos de POO das Aulas 1 a 9. O sistema representa um proprietário e diferentes tipos de celular, incluindo Android e iPhone. Permite testar bateria, armazenamento, validação de valores, construtores, herança, sobrescrita de métodos, classes abstratas e uma interface de conexão simulada.
+Este repositório contém **dois exemplos em Java**: o projeto pessoal de celulares e uma demonstração complementar **FiapRide**, desenvolvidos para aplicar os conteúdos de POO das Aulas 1 a 9. O sistema representa um proprietário e diferentes tipos de celular, incluindo Android e iPhone. Permite testar bateria, armazenamento, validação de valores, construtores, herança, sobrescrita de métodos, classes abstratas e uma interface de conexão simulada.
 
-O projeto pessoal não contém uma implementação separada de Veiculo, Carro, Moto, Passageiro ou Viagem, que aparecem como exemplos no enunciado FiapRide. A autonomia da bateria é **fictícia e didática**, não uma medição real.
+O exemplo FiapRide possui classes próprias para Passageiro, Veiculo, Carro, Moto, Viagem e a interface Rastreavel. Foi incluído como demonstração complementar, sem substituir o projeto pessoal. A autonomia da bateria é **fictícia e didática**, não uma medição real.
 
 ## Classes e estrutura
 
@@ -57,6 +57,27 @@ docs/
 - [x] Aula 7 — Polimorfismo: sobrescrita de calcularAutonomia() e lista de Celular.
 - [x] Aula 8 — Classe Celular abstrata e exibirSistemaOperacional() implementado nas filhas.
 - [x] Aula 9 — Interface Conectavel, implements, constante e teste de conectar().
+
+
+## Exemplo complementar: FiapRide
+
+Além do sistema de celulares, o repositório contém um exemplo independente do domínio citado no enunciado:
+
+| Aula | Demonstração FiapRide |
+| --- | --- |
+| 1 — Classes e objetos | Objetos de Passageiro, Carro e Moto. |
+| 2 — Métodos | Passageiro.adicionarSaldo() e Veiculo.abastecer(). |
+| 3 — Encapsulamento | Campos privados, getters e métodos de alteração com validação. |
+| 4 — Construtores | Passageiro com construtor padrão e parametrizado; Veiculo com parâmetros obrigatórios. |
+| 5 — Associação | Viagem associa Passageiro e Veiculo. |
+| 6 — Herança | Carro e Moto estendem Veiculo. |
+| 7 — Polimorfismo | calcularAutonomia() sobrescrito e List<Veiculo>. |
+| 8 — Classe abstrata | Veiculo é abstract; exibirTipo() é abstrato. |
+| 9 — Interface | Rastreavel, sua constante TECNOLOGIA_PADRAO e implementações de rastrear(). |
+
+![Diagrama complementar do FiapRide](docs/diagrama-fiapride.svg)
+
+Para executar o exemplo no Eclipse, abra `src/br/com/fiapride/main/DemonstracaoFiapRide.java` e selecione **Run As → Java Application**. O programa usa dados fictícios e simulações didáticas: o rastreamento não se conecta a GPS real, e a tarifa de R$ 2,50 por quilômetro é ilustrativa.
 
 ## Perguntas de reflexão
 
@@ -149,8 +170,8 @@ Poderia separar os testes em classes específicas, adicionar testes automatizado
 
 ## Revisão antes da entrega
 
-- [ ] Preencher a turma e revisar as reflexões em primeira pessoa.
-- [ ] Confirmar com o professor se a entrega também exige o projeto FiapRide completo, além do projeto pessoal.
+- [ ] Informar a turma oficial e revisar as reflexões em primeira pessoa.
+- [x] Incluir demonstração FiapRide complementar ao projeto pessoal.
 - [ ] Confirmar o padrão de nome do repositório: o PDF apresenta dois exemplos diferentes.
 - [ ] Se necessário, anexar prints do Astah.
-- [ ] Verificar os commits por aula e enviar o link do repositório público.
+- [x] Manter o histórico de commits e o repositório público.
