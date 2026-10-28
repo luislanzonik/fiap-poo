@@ -21,39 +21,39 @@ public class SistemaPrincipal {
         System.out.println("Idade: " + celular.getProprietario().getIdade());
 
         // 3. Testando o carregamento da bateria
-        celular.bateria = 50;
+        celular.setBateria(50);
         celular.carregarBateria();
-        System.out.println("Bateria: " + celular.bateria);
+        System.out.println("Bateria: " + celular.getBateria());
 
         // 4. Testando a redução da bateria
         celular.reduzirBateria();
-        System.out.println("Bateria: " + celular.bateria);
+        System.out.println("Bateria: " + celular.getBateria());
 
         // 5. Testando o aumento do armazenamento
-        celular.armazenamento = 50;
+        celular.setArmazenamento(50);
         celular.aumentarArmazenamento(20);
-        System.out.println("Armazenamento: " + celular.armazenamento);
+        System.out.println("Armazenamento: " + celular.getArmazenamento());
 
         // 6. Testando a diminuição do armazenamento
         celular.diminuirArmazenamento(10);
-        System.out.println("Armazenamento: " + celular.armazenamento);
+        System.out.println("Armazenamento: " + celular.getArmazenamento());
 
         // 7. Testando valores inválidos no armazenamento
         celular.aumentarArmazenamento(-10);
-        System.out.println("Armazenamento após valor inválido: " + celular.armazenamento);
+        System.out.println("Armazenamento após valor inválido: " + celular.getArmazenamento());
 
         celular.diminuirArmazenamento(100);
-        System.out.println("Armazenamento após diminuir valor inválido: " + celular.armazenamento);
+        System.out.println("Armazenamento após diminuir valor inválido: " + celular.getArmazenamento());
 
         // 8. Testando a bateria quando está cheia
-        celular.bateria = 100;
+        celular.setBateria(100);
         celular.carregarBateria();
-        System.out.println("Bateria após tentar carregar cheia: " + celular.bateria);
+        System.out.println("Bateria após tentar carregar cheia: " + celular.getBateria());
 
         // 9. Testando a bateria quando está vazia
-        celular.bateria = 0;
+        celular.setBateria(0);
         celular.reduzirBateria();
-        System.out.println("Bateria após tentar reduzir em 0: " + celular.bateria);
+        System.out.println("Bateria após tentar reduzir em 0: " + celular.getBateria());
 
         System.out.println("Celular criado!");
 
@@ -74,8 +74,8 @@ public class SistemaPrincipal {
         // 12. Aula 7 - Polimorfismo de Sobrescrita
         System.out.println("\n--- POLIMORFISMO ---");
 
-        samsung.bateria = 100;
-        iphone.bateria = 100;
+        samsung.setBateria(100);
+        iphone.setBateria(100);
 
         List<Celular> celulares = new ArrayList<>();
 
@@ -90,7 +90,6 @@ public class SistemaPrincipal {
         System.out.println("\n--- CLASSES ABSTRATAS ---");
 
         // TESTE 1: Classe abstrata não pode ser instanciada.
-        // Retire o // da linha abaixo para observar o erro.
         // Celular teste = new Celular(dono);
 
         // TESTE 2: Classes filhas podem ser instanciadas.
@@ -100,6 +99,18 @@ public class SistemaPrincipal {
         // TESTE 3: Métodos abstratos implementados pelas filhas.
         System.out.println(androidTeste.exibirSistemaOperacional());
         System.out.println(iphoneTeste.exibirSistemaOperacional());
+
+        // 14. Aula 3 - Testando o Encapsulamento
+        System.out.println("\n--- ENCAPSULAMENTO ---");
+
+        celular.setMarca("Samsung");
+        System.out.println("Marca: " + celular.getMarca());
+
+        celular.setBateria(150);
+        System.out.println("Bateria após valor inválido: " + celular.getBateria());
+
+        celular.setArmazenamento(-50);
+        System.out.println("Armazenamento após valor inválido: " + celular.getArmazenamento());
 
     }
 }

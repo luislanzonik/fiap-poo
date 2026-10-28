@@ -17,7 +17,7 @@ public class Android extends Celular {
     // Aula 7 - Polimorfismo de Sobrescrita
     @Override
     public String calcularAutonomia() {
-        double autonomia = this.bateria / 10.0;
+        double autonomia = this.getBateria() / 10.0;
         return "Autonomia do Android: " + autonomia + " horas.";
     }
 

@@ -17,7 +17,7 @@ public class Iphone extends Celular {
     // Aula 7 - Polimorfismo de Sobrescrita
     @Override
     public String calcularAutonomia() {
-        double autonomia = this.bateria / 8.0;
+        double autonomia = this.getBateria() / 8.0;
         return "Autonomia do iPhone: " + autonomia + " horas.";
     }
 
