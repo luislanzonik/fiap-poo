@@ -21,4 +21,10 @@ public class Android extends Celular {
         return "Autonomia do Android: " + autonomia + " horas.";
     }
 
+    // Aula 8 - Implementação do método abstrato
+    @Override
+    public String exibirSistemaOperacional() {
+        return "Sistema operacional: Android";
+    }
+
 }

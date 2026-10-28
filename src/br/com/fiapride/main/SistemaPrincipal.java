@@ -14,7 +14,7 @@ public class SistemaPrincipal {
 
         // 1. Criando o dono e o celular
         Dono dono = new Dono("Luis", 20);
-        Celular celular = new Celular(dono);
+        Celular celular = new Android(dono, true);
 
         // 2. Mostrando as informações do dono
         System.out.println("Dono: " + celular.getProprietario().getNome());
@@ -71,7 +71,7 @@ public class SistemaPrincipal {
         System.out.println("Dono: " + iphone.getProprietario().getNome());
         System.out.println("Possui Face ID: " + iphone.isTemFaceID());
 
-        // 12. Aula 7 - Testando o polimorfismo de sobrescrita
+        // 12. Aula 7 - Polimorfismo de Sobrescrita
         System.out.println("\n--- POLIMORFISMO ---");
 
         samsung.bateria = 100;
@@ -85,5 +85,21 @@ public class SistemaPrincipal {
         for (Celular aparelho : celulares) {
             System.out.println(aparelho.calcularAutonomia());
         }
+
+        // 13. Aula 8 - Classes Abstratas
+        System.out.println("\n--- CLASSES ABSTRATAS ---");
+
+        // TESTE 1: Classe abstrata não pode ser instanciada.
+        // Retire o // da linha abaixo para observar o erro.
+        Celular teste = new Celular(dono);
+
+        // TESTE 2: Classes filhas podem ser instanciadas.
+        Celular androidTeste = new Android(dono, true);
+        Celular iphoneTeste = new Iphone(dono, true);
+
+        // TESTE 3: Métodos abstratos implementados pelas filhas.
+        System.out.println(androidTeste.exibirSistemaOperacional());
+        System.out.println(iphoneTeste.exibirSistemaOperacional());
+
     }
 }

@@ -21,4 +21,10 @@ public class Iphone extends Celular {
         return "Autonomia do iPhone: " + autonomia + " horas.";
     }
 
+    // Aula 8 - Implementação do método abstrato
+    @Override
+    public String exibirSistemaOperacional() {
+        return "Sistema operacional: iOS";
+    }
+
 }

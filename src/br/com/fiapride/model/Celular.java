@@ -1,7 +1,7 @@
 
 package br.com.fiapride.model;
 
-public class Celular {
+public abstract class Celular {
 
     public String marca;
 
@@ -47,5 +47,8 @@ public class Celular {
     public String calcularAutonomia() {
         return "Autonomia não definida para este celular.";
     }
+
+    // Aula 8 - Classes Abstratas
+    public abstract String exibirSistemaOperacional();
 
 }
