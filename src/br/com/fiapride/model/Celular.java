@@ -10,6 +10,12 @@ public abstract class Celular {
 
     private Dono proprietario;
 
+    // Aula 4 - Construtor padrão
+    public Celular() {
+        this(new Dono("Não informado", 0));
+    }
+
+    // Aula 4 - Construtor personalizado
     public Celular(Dono proprietario) {
         this.proprietario = proprietario;
     }

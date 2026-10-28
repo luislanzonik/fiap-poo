@@ -5,6 +5,12 @@ public class Android extends Celular {
 
     private boolean temDigital;
 
+    // Aula 4 - Construtor padrão
+    public Android() {
+        this(new Dono("Não informado", 0), false);
+    }
+
+    // Aula 4 - Construtor personalizado
     public Android(Dono proprietario, boolean temDigital) {
         super(proprietario);
         this.temDigital = temDigital;

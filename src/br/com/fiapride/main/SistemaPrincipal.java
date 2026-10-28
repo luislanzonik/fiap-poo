@@ -89,18 +89,16 @@ public class SistemaPrincipal {
         // 13. Aula 8 - Classes Abstratas
         System.out.println("\n--- CLASSES ABSTRATAS ---");
 
-        // TESTE 1: Classe abstrata não pode ser instanciada.
+        // Classe abstrata não pode ser instanciada.
         // Celular teste = new Celular(dono);
 
-        // TESTE 2: Classes filhas podem ser instanciadas.
         Celular androidTeste = new Android(dono, true);
         Celular iphoneTeste = new Iphone(dono, true);
 
-        // TESTE 3: Métodos abstratos implementados pelas filhas.
         System.out.println(androidTeste.exibirSistemaOperacional());
         System.out.println(iphoneTeste.exibirSistemaOperacional());
 
-        // 14. Aula 3 - Testando o Encapsulamento
+        // 14. Aula 3 - Encapsulamento
         System.out.println("\n--- ENCAPSULAMENTO ---");
 
         celular.setMarca("Samsung");
@@ -111,6 +109,33 @@ public class SistemaPrincipal {
 
         celular.setArmazenamento(-50);
         System.out.println("Armazenamento após valor inválido: " + celular.getArmazenamento());
+
+        // 15. Aula 4 - Construtores
+        System.out.println("\n--- CONSTRUTORES ---");
+
+        // Testando construtores padrão
+        Android androidPadrao = new Android();
+        Iphone iphonePadrao = new Iphone();
+
+        System.out.println("Android padrão:");
+        System.out.println("Dono: " + androidPadrao.getProprietario().getNome());
+        System.out.println("Possui digital: " + androidPadrao.isTemDigital());
+
+        System.out.println("iPhone padrão:");
+        System.out.println("Dono: " + iphonePadrao.getProprietario().getNome());
+        System.out.println("Possui Face ID: " + iphonePadrao.isTemFaceID());
+
+        // Testando construtores personalizados
+        Android androidPersonalizado = new Android(dono, true);
+        Iphone iphonePersonalizado = new Iphone(dono, true);
+
+        System.out.println("Android personalizado:");
+        System.out.println("Dono: " + androidPersonalizado.getProprietario().getNome());
+        System.out.println("Possui digital: " + androidPersonalizado.isTemDigital());
+
+        System.out.println("iPhone personalizado:");
+        System.out.println("Dono: " + iphonePersonalizado.getProprietario().getNome());
+        System.out.println("Possui Face ID: " + iphonePersonalizado.isTemFaceID());
 
     }
 }

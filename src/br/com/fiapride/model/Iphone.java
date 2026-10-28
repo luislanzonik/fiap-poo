@@ -5,6 +5,12 @@ public class Iphone extends Celular {
 
     private boolean temFaceID;
 
+    // Aula 4 - Construtor padrão
+    public Iphone() {
+        this(new Dono("Não informado", 0), false);
+    }
+
+    // Aula 4 - Construtor personalizado
     public Iphone(Dono proprietario, boolean temFaceID) {
         super(proprietario);
         this.temFaceID = temFaceID;
